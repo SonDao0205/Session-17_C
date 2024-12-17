@@ -133,6 +133,7 @@ void reverseArray(int *array, int currentLength) {
         start++;
         end--;
     }
+    printf("Mang hien tai :\n");
     for (int i = 0; i < currentLength; i++)
     {
         printf("array[%d] = %d\n",i,array[i]);
@@ -199,4 +200,9 @@ void searchItem(int *array, int currentLength,int item){
             printf("array[%d] = %d\n",i,*(ptrArray+i));
         }
     }
+    if (flag == 0)
+    {
+        printf("Phan tu khong ton tai trong mang!\n");
+    }
+    
 }
