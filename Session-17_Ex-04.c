@@ -182,12 +182,20 @@ void descendingSort(int *array, int currentLength){
 
 void searchItem(int *array, int currentLength,int item){
     int *ptrArray = array;
-    int flag = 0;
-    for (int i = 0; i < count; i++)
+    int flag;
+    for (int i = 0; i < currentLength; i++)
     {
+        flag = 1;
         if (*(ptrArray+i) == item)
         {
             flag = 1;
+        }
+        else{
+            flag = 0;
+        }
+        if (flag != 0)
+        {
+            printf("array[%d] = %d\n",i,*(ptrArray+i));
         }
     }
 }
