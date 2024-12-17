@@ -145,20 +145,20 @@ void ascendingSort(int *array, int currentLength){
         {
             for (int j = 0; j < currentLength - i - 1; j++)
             {
-                if (*ptrArray > *(ptrArray+i))
+                if (*(ptrArray + j) > *(ptrArray+j+1))
                     {
-                        int temp = *ptrArray;
-                        *ptrArray = *(ptrArray+j);
-                        *(ptrArray+j) = temp;
+                        int temp = *(ptrArray+j);
+                        *(ptrArray+j) = *(ptrArray+j+1);
+                        *(ptrArray+j+1) = temp;
                     }
             }
         }
+    printf("Mang hien tai : \n");
     for (int i = 0; i < currentLength; i++)
     {
         printf("array[%d] = %d\n",i,array[i]);
     }
 }
-
 
 void descendingSort(int *array, int currentLength){
     int *ptrArray = array;
@@ -166,14 +166,15 @@ void descendingSort(int *array, int currentLength){
         {
             for (int j = 0; j < currentLength - i - 1; j++)
             {
-                if (*ptrArray < *(ptrArray+i))
+                if (*(ptrArray + j) < *(ptrArray+j+1))
                     {
-                        int temp = *ptrArray;
-                        *ptrArray = *(ptrArray+j);
-                        *(ptrArray+j) = temp;
+                        int temp = *(ptrArray+j);
+                        *(ptrArray+j) = *(ptrArray+j+1);
+                        *(ptrArray+j+1) = temp;
                     }
             }
         }
+    printf("Mang hien tai : \n");
     for (int i = 0; i < currentLength; i++)
     {
         printf("array[%d] = %d\n",i,array[i]);
