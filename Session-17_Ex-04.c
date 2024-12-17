@@ -185,7 +185,7 @@ void searchItem(int *array, int currentLength,int item){
     int flag;
     for (int i = 0; i < currentLength; i++)
     {
-        flag = 1;
+        flag = 0;
         if (*(ptrArray+i) == item)
         {
             flag = 1;
